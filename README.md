@@ -23,3 +23,30 @@
 1. Go to the backend folder:
    ```bash
    cd backend
+Install dependencies:
+
+npm install
+
+Create a .env file and add your environment variables like PORT, MONGO_URI, and JWT_SECRET.
+
+Start the backend server:
+
+npm run dev
+
+### Frontend
+Navigate to the frontend folder:
+
+cd frontend
+
+
+Install dependencies:
+
+npm install
+
+
+Create a .env file (optional, for non-sensitive variables):
+
+
+Start the frontend:
+
+npm run start
