@@ -16,6 +16,10 @@ A MERN stack web application inspired by modern networking platforms. devTinder 
 
 📱 Responsive frontend built with React + Tailwind CSS
 
+
+
+
+
 🛠️ Tech Stack
 
 Frontend: React.js, Vite, Tailwind CSS, Axios
@@ -24,6 +28,12 @@ Authentication: JWT
 Real-time: Socket.io
 Payments: Razorpay API
 tools : Postman , MongoDB Compass
+
+
+
+
+
+
 
 📂 Folder Structure
 devTinder/
