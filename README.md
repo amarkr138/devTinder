@@ -35,27 +35,7 @@ tools : Postman , MongoDB Compass
 
 
 
-📂 Folder Structure
-devTinder/
-│── backend/         # Express + MongoDB backend
-│   ├── src/
-│   │   ├── models/  
-│   │   ├── routes/  
-│   │   ├── utils/  
-│   │   └── app.js  
-│   ├── package.json  
-│   └── config/  
-│
-│── frontend/        # React frontend
-│   ├── src/  
-│   │   ├── components/  
-│   │   ├── utils/  
-│   │   └── App.jsx  
-│   ├── index.html  
-│   ├── vite.config.js  
-│   └── package.json  
-│
-└── README.md
+
 
 ⚡ Getting Started
 1️⃣ Clone the repo
