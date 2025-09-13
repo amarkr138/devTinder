@@ -110,7 +110,7 @@ const EditProfile = ({ user }) => {
 
               <div>
                 <fieldset className="fieldset">
-                  <legend className="fieldset-legend">About</legend>
+                  <legend className="fieldset-legend">Bio</legend>
                   <textarea
                     className="textarea textarea-bordered w-full"
                     placeholder="Write something about yourself..."

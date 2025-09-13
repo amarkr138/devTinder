@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const validator = require('validator');
-const bcrypt = require("bcrypt")
-const jwt = require("jsonwebtoken")
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 
 const userSchema = new mongoose.Schema(
   {
@@ -42,16 +42,16 @@ const userSchema = new mongoose.Schema(
     },
     photoUrl: {
       type: String,
-      default: "https://geographyandyou.com/images/user-profile.png",
+      default: 'https://geographyandyou.com/images/user-profile.png',
       validate(value) {
         if (!validator.isURL(value)) {
-          throw new Error("Invalid Photo URL: " + value);
+          throw new Error('Invalid Photo URL: ' + value);
         }
       },
     },
     about: {
       type: String,
-      default: "This is a default about of the user!",
+      default: 'This is a default about of the user!',
     },
 
     gender: {
@@ -61,6 +61,13 @@ const userSchema = new mongoose.Schema(
           throw new Error('Gender is not valid..');
         }
       },
+    },
+    isPremium: {
+      type: Boolean,
+      default: false,
+    },
+    membershipType: {
+      type: String,
     },
   },
   { timestamps: true }
@@ -77,7 +84,10 @@ userSchema.methods.getJWT = async function () {
 userSchema.methods.validatePassword = async function (passwordInputByUser) {
   const user = this;
   const passwordHash = user.password;
-  const isPasswordValid = await bcrypt.compare(passwordInputByUser, passwordHash);
+  const isPasswordValid = await bcrypt.compare(
+    passwordInputByUser,
+    passwordHash
+  );
   return isPasswordValid;
 };
 module.exports = mongoose.model('User', userSchema);
